@@ -5,11 +5,20 @@
   tasks:
     - name:  copy WAR file to Tomcat
       copy: 
+<<<<<<< HEAD
         src: '/var/snap/jenkins/4874/workspace/MavenAnsible-CICD/target/MyMavenAnsibleWebApp.war'
+=======
+        src: '/var/snap/jenkins/4874/workspace/MavenAnsible-CICD/target/MavenAnsibleApp.war'
+>>>>>>> bd630e0 (updated playbook.yml)
         dest: '/opt/tomcat/webapps/MavenAnsibleApp.war'
         remote_src: no
         
     - name: Restart Tomcat
       systemd:
+<<<<<<< HEAD
         name: tomcat
         state: restarted
+=======
+       name: tomcat
+       state: restarted
+>>>>>>> bd630e0 (updated playbook.yml)
