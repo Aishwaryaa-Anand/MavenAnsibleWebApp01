@@ -4,12 +4,12 @@
   become: yes
   tasks:
     - name:  copy WAR file to Tomcat
-       copy: 
+      copy: 
          src: '/var/snap/jenkins/4874/workspace/MavenAnsible-CICD/target/MyMavenAnsibleWebApp.war'
          dest: '/opt/tomcat/webapps/MavenAnsibleApp.war'
          remote_src: no
         
     - name: Restart Tomcat
-       systemd:
+      systemd:
         name: tomcat
         state: restarted
